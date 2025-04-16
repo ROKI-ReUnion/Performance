@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Voice-Line</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('bg.gif') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1, p {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    h1 {
+      font-size: 2em;
+      animation-delay: 2s;
+    }
+    p {
+      font-size: 1em;
+      animation-delay: 4s;
+    }
+    .footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #aaa;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 6s;
+      opacity: 0;
+    }
+    .voice-link {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      font-size: 1.2em;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #ffffff;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+      animation: float 3s ease-in-out infinite, fadeIn 2s ease forwards;
+      animation-delay: 5s;
+      opacity: 0;
+    }
+    .voice-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .shooting-star {
+      position: absolute;
+      top: 0;
+      left: -100px;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 15px white;
+      animation: shoot 2s ease-in-out 1s forwards;
+    }
+    @keyframes shoot {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(800px, 800px) scale(0.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="shooting-star"></div>
+  <h1>QRコードを見てくれてありがとう！</h1>
+  <p>
+    僕がこのパフォーマンスをしている理由。<br>
+    それを知りたければ、ぜひこのイベントにご参加ください。<br><br>
+    無料です。<br>
+    参加の記入も要りません。<br>
+    ただ、その場にいてくれれば、それで十分です。
+  </p>
+  <a href="#" class="voice-link">Voice Line</a>
+  <div class="footer">
+    ご連絡：@ROKI_ReUnion ｜ roki.reunion@gmail.com
+  </div>
+</body>
+</html>
